@@ -6,40 +6,34 @@
     <title>Achyuta Studio | Something Beautiful Is In The Works</title>
     
     <!-- BRAND FAVICON CONNECTION -->
-    <link rel="icon" type="image/png" href="./favicon.png?v=300">
+    <link rel="icon" type="image/png" href="./favicon.png?v=999">
     
     <!-- TYPOGRAPHY CONNECTIONS -->
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://googleapis.com" rel="stylesheet">
     
     <style>
-        :root {
-            --bg-color: #ffffff; /* Crisp white canvas */
-            --text-color: #1a1c1e; /* Deep editorial charcoal */
-            --accent-color: #bfa15f; /* Sophisticated muted gold */
-            --text-muted: #626875;
-            --border-color: #e5e7eb;
-        }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        body {
+        /* BULLETPROOF RAW LIGHT CONTROLS */
+        html, body {
+            background-color: #ffffff !important;
+            color: #1a1c1e !important;
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
             line-height: 1.6;
             overflow: hidden;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            width: 100vw;
         }
 
-        /* Top Bar Status Placement Only - Left Logo Kept Cleared */
+        /* Only Status Badge on Right Side - Left Logo Completely Cleared */
         nav {
             display: flex;
             justify-content: flex-end;
@@ -54,14 +48,14 @@
             font-size: 0.7rem;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: var(--text-color);
-            border: 1px solid var(--text-color);
+            color: #1a1c1e;
+            border: 1px solid #1a1c1e;
             padding: 0.4rem 1.2rem;
             border-radius: 50px;
             font-weight: 500;
         }
 
-        /* Center Landing Content Presentation Container */
+        /* Single Center Presentation Panel Layout */
         .main-container {
             flex: 1;
             display: flex;
@@ -71,18 +65,20 @@
             text-align: center;
             padding: 0 1.5rem;
             z-index: 5;
+            background-color: #ffffff !important;
         }
 
-        /* PERFECTLY CENTERED SINGLE IMAGE LOGO LAYOUT */
+        /* CENTERED IMAGE LOGO - NO OVERLAPS */
         .hero-logo-wrapper {
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem;
             display: flex;
             justify-content: center;
             align-items: center;
+            width: 100%;
         }
 
         .hero-logo-wrapper img {
-            height: 110px; /* Elegant focal point dimension */
+            height: 140px; /* Enhanced sizing for visual pop */
             width: auto;
             display: block;
         }
@@ -94,86 +90,80 @@
             line-height: 1.3;
             margin-bottom: 1.5rem;
             letter-spacing: -0.5px;
-            color: var(--text-color);
+            color: #1a1c1e !important;
         }
 
         .main-container h1 span {
             font-style: italic;
-            color: var(--accent-color);
+            color: #bfa15f; /* Elegant Studio Gold */
         }
 
         .main-container p {
             font-size: clamp(0.95rem, 1.5vw, 1.1rem);
-            color: var(--text-muted);
+            color: #626875;
             max-width: 540px;
             font-weight: 300;
             margin-bottom: 3.5rem;
             letter-spacing: 0.3px;
         }
 
-        /* Interactive Inquiry Element */
         .contact-trigger {
-            color: var(--text-color);
+            color: #1a1c1e;
             text-decoration: none;
             font-size: 0.8rem;
             letter-spacing: 2px;
             text-transform: uppercase;
-            border-bottom: 2px solid var(--accent-color);
+            border-bottom: 2px solid #bfa15f;
             padding-bottom: 0.5rem;
             font-weight: 500;
             transition: color 0.3s, border-color 0.3s;
         }
 
         .contact-trigger:hover {
-            color: var(--accent-color);
-            border-color: var(--text-color);
+            color: #bfa15f;
+            border-color: #1a1c1e;
         }
 
-        /* Footer Layout Area */
         footer {
             padding: 2.5rem 1.5rem;
             text-align: center;
             font-size: 0.75rem;
-            color: var(--text-muted);
+            color: #626875;
             letter-spacing: 0.5px;
             z-index: 10;
-            border-top: 1px solid var(--border-color);
+            border-top: 1px solid #e5e7eb;
+            background-color: #ffffff !important;
         }
 
         footer a {
-            color: var(--text-muted);
+            color: #626875;
             text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        footer a:hover {
-            color: var(--text-color);
         }
     </style>
 </head>
-<body>
+<body style="background-color: #ffffff !important;">
 
-    <!-- Minimal Header Layout Container -->
+    <!-- Upper Control Navigation -->
     <nav>
         <div class="status-badge">Coming Soon 2026</div>
     </nav>
 
-    <!-- Main Focused Landing Panel -->
-    <main class="main-container">
+    <!-- Unified Center Section -->
+    <main class="main-container" style="background-color: #ffffff !important;">
         
-        <!-- Single, High-Contrast Logo Layout -->
+        <!-- One Single Centered Logo Placement -->
         <div class="hero-logo-wrapper">
-            <img src="./favicon.png?v=300" alt="Achyuta Studio Logo">
+            <img src="./favicon.png?v=999" alt="Achyuta Studio Logo">
         </div>
         
-        <h1>Something beautiful is <span>in the works</span>.</h1>
+        <h1 style="color: #1a1c1e !important;">Something beautiful is <span>in the works</span>.</h1>
         <p>Achyuta Studio is currently crafting an elevated digital environment. Our full interactive studio portfolio display platform will premiere shortly.</p>
         
         <a href="mailto:hello@shopachyutastudio.com" class="contact-trigger">Inquire Early</a>
     </main>
 
-    <!-- Base Footer Identification Block -->
-    <footer>
+    <!-- Footer Security Information -->
+    <footer style="background-color: #ffffff !important;">
         <p>&copy; 2026 <a href="https://shopachyutastudio.com">Achyuta Studio</a>. Active and encrypted.</p>
     </footer>
 
