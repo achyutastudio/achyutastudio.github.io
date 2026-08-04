@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Achyuta Studio | Creative Solutions</title>
+    <title>Achyuta Studio | Something Beautiful Is In The Works</title>
     
-    <!-- 1. FIXED FAVICON LINK WITH CACHE BUSTER -->
-    <link rel="icon" type="image/png" href="favicon.png?v=2">
+    <!-- FAVICON ICON CONNECTIONS WITH CACHE BUSTERS -->
+    <link rel="icon" type="image/png" href="favicon.png?v=3">
     
-    <!-- 2. FIXED BROKEN GOOGLE FONTS URLS (Added fonts. to paths) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <!-- TYPOGRAPHY CONNECTIONS -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --bg-color: #0f1012;
+            --bg-color: #0a0b0d;
             --text-color: #f3f4f6;
-            --accent-color: #d4af37; /* Subtle metallic gold */
-            --card-bg: #1a1c20;
-            --text-muted: #9ca3af;
+            --accent-color: #d4af37; /* Elegant Gold */
+            --text-muted: #6b7280;
+            --glow-color: rgba(212, 175, 55, 0.03);
         }
 
         * {
@@ -33,225 +33,172 @@
             background-color: var(--bg-color);
             color: var(--text-color);
             line-height: 1.6;
-            overflow-x: hidden;
+            overflow: hidden; /* Clean viewport block */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
-        /* Navigation */
+        /* Ambient Background Graphics for Transparent Logo */
+        .ambient-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, var(--glow-color) 0%, rgba(0,0,0,0) 70%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* Top Navigation Header Layout */
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 2rem 4%;
+            padding: 2.5rem 5%;
             position: absolute;
             width: 100%;
             z-index: 10;
         }
 
-        /* 3. LOGO CONTAINER POSITIONING */
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-
-        /* 4. CHROME LOGO SIZE CONTROLS */
-        .logo img {
-            height: 40px; /* Adjust this number to make your logo bigger or smaller */
-            width: auto;  /* Prevents your logo image from distorting */
+        .nav-logo img {
+            height: 32px;
+            width: auto;
             display: block;
+            opacity: 0.8;
+            transition: opacity 0.3s;
         }
 
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
+        .nav-logo img:hover {
+            opacity: 1;
         }
 
-        .nav-links a {
-            color: var(--text-color);
-            text-decoration: none;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
+        .status-badge {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
             color: var(--accent-color);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            background-color: rgba(212, 175, 55, 0.02);
         }
 
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
+        /* Center Landing Content Layout */
+        .main-container {
+            flex: 1;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding: 0 4%;
+            align-items: center;
+            text-align: center;
+            padding: 0 1.5rem;
+            z-index: 5;
             position: relative;
-            background: linear-gradient(135deg, #131518 0%, #0f1012 100%);
         }
 
-        .hero-content {
-            max-width: 800px;
+        /* Central Statement Graphic Layout */
+        .hero-logo-wrapper {
+            margin-bottom: 2.5rem;
+            position: relative;
         }
 
-        .hero h1 {
+        .hero-logo-wrapper img {
+            height: 90px; /* Elegant focal point dimension */
+            width: auto;
+            display: block;
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
+        }
+
+        .main-container h1 {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
+            font-size: clamp(2rem, 5vw, 3.5rem);
             font-weight: 400;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
         }
 
-        .hero h1 span {
+        .main-container h1 span {
             font-style: italic;
             color: var(--accent-color);
         }
 
-        .hero p {
-            font-size: clamp(1rem, 2vw, 1.25rem);
+        .main-container p {
+            font-size: clamp(0.95rem, 1.5vw, 1.1rem);
             color: var(--text-muted);
-            margin-bottom: 2.5rem;
-            max-width: 600px;
+            max-width: 520px;
             font-weight: 300;
+            margin-bottom: 3rem;
+            letter-spacing: 0.3px;
         }
 
-        .btn {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            background-color: transparent;
+        /* Minimal Call-To-Action Element */
+        .contact-trigger {
             color: var(--text-color);
-            border: 1px solid var(--accent-color);
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             letter-spacing: 2px;
             text-transform: uppercase;
-            transition: all 0.3s ease;
+            border-bottom: 1px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            transition: color 0.3s, border-color 0.3s;
         }
 
-        .btn:hover {
-            background-color: var(--accent-color);
-            color: #000;
-            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.1);
+        .contact-trigger:hover {
+            color: var(--accent-color);
+            border-color: var(--text-color);
         }
 
-        /* Services Section */
-        .services {
-            padding: 8rem 4%;
-            background-color: #131518;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 5rem;
-        }
-
-        .section-header h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .section-header p {
-            color: var(--text-muted);
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2.5rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .card {
-            background-color: var(--card-bg);
-            padding: 3rem 2rem;
-            border: 1px solid rgba(255,255,255,0.03);
-            transition: transform 0.3s, border-color 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(212, 175, 55, 0.3);
-        }
-
-        .card h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-
-        /* Footer */
+        /* Footer Layout Area */
         footer {
-            padding: 4rem 4%;
+            padding: 2.5rem 1.5rem;
             text-align: center;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: var(--text-muted);
+            letter-spacing: 0.5px;
+            z-index: 10;
         }
 
-        /* Responsive Breakpoints */
-        @media (max-width: 768px) {
-            nav { padding: 1.5rem 4%; }
-            .nav-links { display: none; }
-            .services { padding: 5rem 4%; }
-            .section-header { margin-bottom: 3rem; }
+        footer a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--text-color);
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Navigation -->
+    <!-- Ambient Visual Glow Behind Logo Placement -->
+    <div class="ambient-glow"></div>
+
+    <!-- Top Navigation Header -->
     <nav>
-        <!-- 5. FIXED LOGO CODE: TRANSFORMS PLAIN TEXT INTO AN IMAGE -->
-        <div class="logo">
-            <img src="logo.png" alt="Achyuta Studio Logo">
+        <div class="nav-logo">
+            <img src="favicon.png?v=3" alt="Achyuta Studio Icon">
         </div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+        <div class="status-badge">Studio Launch 2026</div>
     </nav>
 
-    <!-- Hero Showcase Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>We craft digital <span>experiences</span> that resonate.</h1>
-            <p>Welcome to Achyuta Studio. We mix striking visual design with modern code environments to elevate your business presence globally.</p>
-            <a href="mailto:your-email@domain.com" class="btn">Get In Touch</a>
+    <!-- Center Landing Area Content -->
+    <main class="main-container">
+        <div class="hero-logo-wrapper">
+            <img src="favicon.png?v=3" alt="Achyuta Studio Central Logo">
         </div>
-    </section>
+        <h1>Something beautiful is <span>in the works</span>.</h1>
+        <p>Achyuta Studio is currently crafting an elevated digital space. Our full brand showcase and interactive portfolio solutions platform will premiere shortly.</p>
+        <a href="mailto:hello@shopachyutastudio.com" class="contact-trigger">Inquire Early</a>
+    </main>
 
-    <!-- Services Overview Section -->
-    <section id="services" class="services">
-        <div class="section-header">
-            <h2>Our Expertise</h2>
-            <p>Tailored minimalist digital services built for long-term scalability.</p>
-        </div>
-        <div class="grid">
-            <div class="card">
-                <h3>Digital Design</h3>
-                <p>Creating purposeful, intuitive design structures that captivate target audiences and solidify clean digital branding layouts.</p>
-            </div>
-            <div class="card">
-                <h3>Web Architecture</h3>
-                <p>Developing blazing-fast, search-engine-optimized static sites utilizing modern infrastructure setups for optimal security.</p>
-            </div>
-            <div class="card">
-                <h3>Brand Identity</h3>
-                <p>Structuring custom visual guidelines, logo kits, and precise typography pairs designed to stand out in crowded commercial spaces.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer Area -->
+    <!-- Footer Area Layout -->
     <footer>
-        <p>&copy; 2026 Achyuta Studio. All rights reserved. Securely hosted via GitHub Pages.</p>
+        <p>&copy; 2026 <a href="https://shopachyutastudio.com">Achyuta Studio</a>. Securely encrypted and active.</p>
     </footer>
 
 </body>
