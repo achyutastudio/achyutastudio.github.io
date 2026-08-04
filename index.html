@@ -6,19 +6,20 @@
     <title>Achyuta Studio | Something Beautiful Is In The Works</title>
     
     <!-- BRAND FAVICON CONNECTION -->
-    <link rel="icon" type="image/png" href="./favicon.png?v=200">
+    <link rel="icon" type="image/png" href="./favicon.png?v=300">
     
     <!-- TYPOGRAPHY CONNECTIONS -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --bg-color: #08090a;
-            --text-color: #f3f4f6;
-            --accent-color: #d4af37; /* Clean Studio Gold */
+            --bg-color: #ffffff; /* Crisp white canvas */
+            --text-color: #1a1c1e; /* Deep editorial charcoal */
+            --accent-color: #bfa15f; /* Sophisticated muted gold */
             --text-muted: #626875;
+            --border-color: #e5e7eb;
         }
 
         * {
@@ -38,10 +39,10 @@
             min-height: 100vh;
         }
 
-        /* Top Bar Status Placement Only - Left Logo Removed */
+        /* Top Bar Status Placement Only - Left Logo Kept Cleared */
         nav {
             display: flex;
-            justify-content: flex-end; /* Pushes content to the right */
+            justify-content: flex-end;
             align-items: center;
             padding: 2.5rem 5%;
             position: absolute;
@@ -53,11 +54,11 @@
             font-size: 0.7rem;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: var(--accent-color);
-            border: 1px solid rgba(212, 175, 55, 0.2);
+            color: var(--text-color);
+            border: 1px solid var(--text-color);
             padding: 0.4rem 1.2rem;
             border-radius: 50px;
-            background-color: rgba(212, 175, 55, 0.01);
+            font-weight: 500;
         }
 
         /* Center Landing Content Presentation Container */
@@ -72,19 +73,18 @@
             z-index: 5;
         }
 
-        /* BOLD TEXT BRANDING LOGO - REMOVES DARK BLENDING BLOCKS */
-        .brand-text-logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            font-weight: 400;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            margin-bottom: 2rem;
-            color: var(--text-color);
+        /* PERFECTLY CENTERED SINGLE IMAGE LOGO LAYOUT */
+        .hero-logo-wrapper {
+            margin-bottom: 2.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        .brand-text-logo span {
-            color: var(--accent-color);
+        .hero-logo-wrapper img {
+            height: 110px; /* Elegant focal point dimension */
+            width: auto;
+            display: block;
         }
 
         .main-container h1 {
@@ -94,6 +94,7 @@
             line-height: 1.3;
             margin-bottom: 1.5rem;
             letter-spacing: -0.5px;
+            color: var(--text-color);
         }
 
         .main-container h1 span {
@@ -105,9 +106,9 @@
             font-size: clamp(0.95rem, 1.5vw, 1.1rem);
             color: var(--text-muted);
             max-width: 540px;
-            font-weight: 200;
+            font-weight: 300;
             margin-bottom: 3.5rem;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.3px;
         }
 
         /* Interactive Inquiry Element */
@@ -117,8 +118,9 @@
             font-size: 0.8rem;
             letter-spacing: 2px;
             text-transform: uppercase;
-            border-bottom: 1px solid var(--accent-color);
+            border-bottom: 2px solid var(--accent-color);
             padding-bottom: 0.5rem;
+            font-weight: 500;
             transition: color 0.3s, border-color 0.3s;
         }
 
@@ -135,6 +137,7 @@
             color: var(--text-muted);
             letter-spacing: 0.5px;
             z-index: 10;
+            border-top: 1px solid var(--border-color);
         }
 
         footer a {
@@ -158,8 +161,10 @@
     <!-- Main Focused Landing Panel -->
     <main class="main-container">
         
-        <!-- Typography Logo Replacing Blending Graphics -->
-        <div class="brand-text-logo">Achyuta<span>.</span></div>
+        <!-- Single, High-Contrast Logo Layout -->
+        <div class="hero-logo-wrapper">
+            <img src="./favicon.png?v=300" alt="Achyuta Studio Logo">
+        </div>
         
         <h1>Something beautiful is <span>in the works</span>.</h1>
         <p>Achyuta Studio is currently crafting an elevated digital environment. Our full interactive studio portfolio display platform will premiere shortly.</p>
