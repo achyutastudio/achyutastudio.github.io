@@ -5,21 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Achyuta Studio | Something Beautiful Is In The Works</title>
     
-    <!-- FORCED CACHE BUSTERS FOR ICON -->
-    <link rel="icon" type="image/png" href="./favicon.png?v=100">
+    <!-- BRAND FAVICON CONNECTION -->
+    <link rel="icon" type="image/png" href="./favicon.png?v=200">
     
     <!-- TYPOGRAPHY CONNECTIONS -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght=300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --bg-color: #0d0e12;
+            --bg-color: #08090a;
             --text-color: #f3f4f6;
-            --accent-color: #d4af37; /* Elegant Gold */
-            --text-muted: #8e95a2;
-            --glow-color: rgba(147, 51, 234, 0.15);
+            --accent-color: #d4af37; /* Clean Studio Gold */
+            --text-muted: #626875;
         }
 
         * {
@@ -39,21 +38,10 @@
             min-height: 100vh;
         }
 
-        .ambient-glow {
-            position: absolute;
-            top: 40%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, var(--glow-color) 0%, rgba(0,0,0,0) 70%);
-            z-index: 1;
-            pointer-events: none;
-        }
-
+        /* Top Bar Status Placement Only - Left Logo Removed */
         nav {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-end; /* Pushes content to the right */
             align-items: center;
             padding: 2.5rem 5%;
             position: absolute;
@@ -61,32 +49,18 @@
             z-index: 10;
         }
 
-        /* LIGHT-BOX EFFECT BACKDROP FOR NAVBAR LOGO */
-        .nav-logo {
-            background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent solid white background card */
-            padding: 6px 12px;
-            border-radius: 8px;
-            display: inline-block;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        }
-
-        .nav-logo img {
-            height: 28px;
-            width: auto;
-            display: block;
-        }
-
         .status-badge {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             text-transform: uppercase;
             letter-spacing: 2px;
             color: var(--accent-color);
             border: 1px solid rgba(212, 175, 55, 0.2);
-            padding: 0.4rem 1rem;
+            padding: 0.4rem 1.2rem;
             border-radius: 50px;
-            background-color: rgba(212, 175, 55, 0.02);
+            background-color: rgba(212, 175, 55, 0.01);
         }
 
+        /* Center Landing Content Presentation Container */
         .main-container {
             flex: 1;
             display: flex;
@@ -96,36 +70,28 @@
             text-align: center;
             padding: 0 1.5rem;
             z-index: 5;
-            position: relative;
-            margin-top: 2rem;
         }
 
-        /* BRIGHT WHITE DISC BACKDROP TO ACCENTUATE DARK LOGO */
-        .hero-logo-wrapper {
-            margin-bottom: 2.5rem;
-            position: relative;
-            background-color: #ffffff; /* Forces a solid clean white circular background */
-            padding: 2rem;
-            border-radius: 50%;
-            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2), inset 0 2px 4px rgba(0,0,0,0.1);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 160px;
-            height: 160px;
+        /* BOLD TEXT BRANDING LOGO - REMOVES DARK BLENDING BLOCKS */
+        .brand-text-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 400;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            color: var(--text-color);
         }
 
-        .hero-logo-wrapper img {
-            max-height: 110px;
-            width: auto;
-            display: block;
+        .brand-text-logo span {
+            color: var(--accent-color);
         }
 
         .main-container h1 {
             font-family: 'Playfair Display', serif;
             font-size: clamp(2.2rem, 5vw, 3.8rem);
             font-weight: 400;
-            line-height: 1.2;
+            line-height: 1.3;
             margin-bottom: 1.5rem;
             letter-spacing: -0.5px;
         }
@@ -136,18 +102,19 @@
         }
 
         .main-container p {
-            font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+            font-size: clamp(0.95rem, 1.5vw, 1.1rem);
             color: var(--text-muted);
-            max-width: 580px;
-            font-weight: 300;
+            max-width: 540px;
+            font-weight: 200;
             margin-bottom: 3.5rem;
-            letter-spacing: 0.3px;
+            letter-spacing: 0.5px;
         }
 
+        /* Interactive Inquiry Element */
         .contact-trigger {
             color: var(--text-color);
             text-decoration: none;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             letter-spacing: 2px;
             text-transform: uppercase;
             border-bottom: 1px solid var(--accent-color);
@@ -160,10 +127,11 @@
             border-color: var(--text-color);
         }
 
+        /* Footer Layout Area */
         footer {
             padding: 2.5rem 1.5rem;
             text-align: center;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: var(--text-muted);
             letter-spacing: 0.5px;
             z-index: 10;
@@ -182,28 +150,26 @@
 </head>
 <body>
 
-    <div class="ambient-glow"></div>
-
+    <!-- Minimal Header Layout Container -->
     <nav>
-        <!-- FORCED CACHE BUSTER EXTENSION ?v=100 -->
-        <div class="nav-logo">
-            <img src="./favicon.png?v=100" alt="Achyuta Studio Icon">
-        </div>
-        <div class="status-badge">Studio Launch 2026</div>
+        <div class="status-badge">Coming Soon 2026</div>
     </nav>
 
+    <!-- Main Focused Landing Panel -->
     <main class="main-container">
-        <!-- FORCED CACHE BUSTER EXTENSION ?v=100 -->
-        <div class="hero-logo-wrapper">
-            <img src="./favicon.png?v=100" alt="Achyuta Studio Central Logo">
-        </div>
+        
+        <!-- Typography Logo Replacing Blending Graphics -->
+        <div class="brand-text-logo">Achyuta<span>.</span></div>
+        
         <h1>Something beautiful is <span>in the works</span>.</h1>
-        <p>Achyuta Studio is currently crafting an elevated digital space. Our full brand showcase and interactive portfolio solutions platform will premiere shortly.</p>
+        <p>Achyuta Studio is currently crafting an elevated digital environment. Our full interactive studio portfolio display platform will premiere shortly.</p>
+        
         <a href="mailto:hello@shopachyutastudio.com" class="contact-trigger">Inquire Early</a>
     </main>
 
+    <!-- Base Footer Identification Block -->
     <footer>
-        <p>&copy; 2026 <a href="https://shopachyutastudio.com">Achyuta Studio</a>. Securely encrypted and active.</p>
+        <p>&copy; 2026 <a href="https://shopachyutastudio.com">Achyuta Studio</a>. Active and encrypted.</p>
     </footer>
 
 </body>
