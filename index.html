@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Achyuta Studio | Something Beautiful Is In The Works</title>
     
-    <!-- FAVICON ICON CONNECTIONS WITH CACHE BUSTERS -->
-    <link rel="icon" type="image/png" href="./favicon.png?v=5">
+    <!-- FORCED CACHE BUSTERS FOR ICON -->
+    <link rel="icon" type="image/png" href="./favicon.png?v=100">
     
     <!-- TYPOGRAPHY CONNECTIONS -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght=300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     
     <style>
         :root {
@@ -19,7 +19,7 @@
             --text-color: #f3f4f6;
             --accent-color: #d4af37; /* Elegant Gold */
             --text-muted: #8e95a2;
-            --glow-color: rgba(147, 51, 234, 0.15); /* Purple studio glow fallback */
+            --glow-color: rgba(147, 51, 234, 0.15);
         }
 
         * {
@@ -33,13 +33,12 @@
             background-color: var(--bg-color);
             color: var(--text-color);
             line-height: 1.6;
-            overflow: hidden; /* Clean viewport block */
+            overflow: hidden;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
 
-        /* Ambient Background Graphics for Transparent Logo */
         .ambient-glow {
             position: absolute;
             top: 40%;
@@ -52,7 +51,6 @@
             pointer-events: none;
         }
 
-        /* Top Navigation Header Layout */
         nav {
             display: flex;
             justify-content: space-between;
@@ -63,17 +61,19 @@
             z-index: 10;
         }
 
-        /* FIXED NAVBAR LOGO CONTRAST FILTER */
-        .nav-logo img {
-            height: 38px;
-            width: auto;
-            display: block;
-            filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.6)) brightness(1.2);
-            transition: all 0.3s;
+        /* LIGHT-BOX EFFECT BACKDROP FOR NAVBAR LOGO */
+        .nav-logo {
+            background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent solid white background card */
+            padding: 6px 12px;
+            border-radius: 8px;
+            display: inline-block;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
 
-        .nav-logo img:hover {
-            filter: drop-shadow(0px 0px 12px rgba(212, 175, 55, 0.8)) brightness(1.4);
+        .nav-logo img {
+            height: 28px;
+            width: auto;
+            display: block;
         }
 
         .status-badge {
@@ -87,7 +87,6 @@
             background-color: rgba(212, 175, 55, 0.02);
         }
 
-        /* Center Landing Content Layout */
         .main-container {
             flex: 1;
             display: flex;
@@ -101,21 +100,25 @@
             margin-top: 2rem;
         }
 
-        /* FIXED CENTRAL LOGO CONTRAST & RADIAL GLOW */
+        /* BRIGHT WHITE DISC BACKDROP TO ACCENTUATE DARK LOGO */
         .hero-logo-wrapper {
             margin-bottom: 2.5rem;
             position: relative;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, rgba(0, 0, 0, 0) 65%);
+            background-color: #ffffff; /* Forces a solid clean white circular background */
             padding: 2rem;
             border-radius: 50%;
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2), inset 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 160px;
+            height: 160px;
         }
 
         .hero-logo-wrapper img {
-            height: 120px; /* Enhanced presence sizing */
+            max-height: 110px;
             width: auto;
             display: block;
-            /* Combined filters to illuminate dark graphics onto pitch black canvas */
-            filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.5)) drop-shadow(0px 10px 25px rgba(0, 0, 0, 0.9)) brightness(1.2);
         }
 
         .main-container h1 {
@@ -141,7 +144,6 @@
             letter-spacing: 0.3px;
         }
 
-        /* Minimal Call-To-Action Element */
         .contact-trigger {
             color: var(--text-color);
             text-decoration: none;
@@ -158,7 +160,6 @@
             border-color: var(--text-color);
         }
 
-        /* Footer Layout Area */
         footer {
             padding: 2.5rem 1.5rem;
             text-align: center;
@@ -181,28 +182,26 @@
 </head>
 <body>
 
-    <!-- Ambient Visual Glow Behind Logo Placement -->
     <div class="ambient-glow"></div>
 
-    <!-- Top Navigation Header -->
     <nav>
+        <!-- FORCED CACHE BUSTER EXTENSION ?v=100 -->
         <div class="nav-logo">
-            <img src="./favicon.png?v=5" alt="Achyuta Studio Icon">
+            <img src="./favicon.png?v=100" alt="Achyuta Studio Icon">
         </div>
         <div class="status-badge">Studio Launch 2026</div>
     </nav>
 
-    <!-- Center Landing Area Content -->
     <main class="main-container">
+        <!-- FORCED CACHE BUSTER EXTENSION ?v=100 -->
         <div class="hero-logo-wrapper">
-            <img src="./favicon.png?v=5" alt="Achyuta Studio Central Logo">
+            <img src="./favicon.png?v=100" alt="Achyuta Studio Central Logo">
         </div>
         <h1>Something beautiful is <span>in the works</span>.</h1>
         <p>Achyuta Studio is currently crafting an elevated digital space. Our full brand showcase and interactive portfolio solutions platform will premiere shortly.</p>
         <a href="mailto:hello@shopachyutastudio.com" class="contact-trigger">Inquire Early</a>
     </main>
 
-    <!-- Footer Area Layout -->
     <footer>
         <p>&copy; 2026 <a href="https://shopachyutastudio.com">Achyuta Studio</a>. Securely encrypted and active.</p>
     </footer>
