@@ -6,7 +6,7 @@
     <title>Achyuta Studio | Something Beautiful Is In The Works</title>
     
     <!-- FAVICON ICON CONNECTIONS WITH CACHE BUSTERS -->
-    <link rel="icon" type="image/png" href="./favicon.png?v=4">
+    <link rel="icon" type="image/png" href="./favicon.png?v=5">
     
     <!-- TYPOGRAPHY CONNECTIONS -->
     <link rel="preconnect" href="https://googleapis.com">
@@ -15,11 +15,11 @@
     
     <style>
         :root {
-            --bg-color: #0a0b0d;
+            --bg-color: #0d0e12;
             --text-color: #f3f4f6;
             --accent-color: #d4af37; /* Elegant Gold */
-            --text-muted: #6b7280;
-            --glow-color: rgba(212, 175, 55, 0.03);
+            --text-muted: #8e95a2;
+            --glow-color: rgba(147, 51, 234, 0.15); /* Purple studio glow fallback */
         }
 
         * {
@@ -42,11 +42,11 @@
         /* Ambient Background Graphics for Transparent Logo */
         .ambient-glow {
             position: absolute;
-            top: 50%;
+            top: 40%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 450px;
-            height: 450px;
+            width: 500px;
+            height: 500px;
             background: radial-gradient(circle, var(--glow-color) 0%, rgba(0,0,0,0) 70%);
             z-index: 1;
             pointer-events: none;
@@ -63,16 +63,17 @@
             z-index: 10;
         }
 
+        /* FIXED NAVBAR LOGO CONTRAST FILTER */
         .nav-logo img {
-            height: 32px;
+            height: 38px;
             width: auto;
             display: block;
-            opacity: 0.8;
-            transition: opacity 0.3s;
+            filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.6)) brightness(1.2);
+            transition: all 0.3s;
         }
 
         .nav-logo img:hover {
-            opacity: 1;
+            filter: drop-shadow(0px 0px 12px rgba(212, 175, 55, 0.8)) brightness(1.4);
         }
 
         .status-badge {
@@ -97,27 +98,32 @@
             padding: 0 1.5rem;
             z-index: 5;
             position: relative;
+            margin-top: 2rem;
         }
 
-        /* Central Statement Graphic Layout */
+        /* FIXED CENTRAL LOGO CONTRAST & RADIAL GLOW */
         .hero-logo-wrapper {
             margin-bottom: 2.5rem;
             position: relative;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, rgba(0, 0, 0, 0) 65%);
+            padding: 2rem;
+            border-radius: 50%;
         }
 
         .hero-logo-wrapper img {
-            height: 90px; /* Elegant focal point dimension */
+            height: 120px; /* Enhanced presence sizing */
             width: auto;
             display: block;
-            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
+            /* Combined filters to illuminate dark graphics onto pitch black canvas */
+            filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.5)) drop-shadow(0px 10px 25px rgba(0, 0, 0, 0.9)) brightness(1.2);
         }
 
         .main-container h1 {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
             font-weight: 400;
             line-height: 1.2;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             letter-spacing: -0.5px;
         }
 
@@ -127,11 +133,11 @@
         }
 
         .main-container p {
-            font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+            font-size: clamp(0.95rem, 1.5vw, 1.15rem);
             color: var(--text-muted);
-            max-width: 520px;
+            max-width: 580px;
             font-weight: 300;
-            margin-bottom: 3rem;
+            margin-bottom: 3.5rem;
             letter-spacing: 0.3px;
         }
 
@@ -181,7 +187,7 @@
     <!-- Top Navigation Header -->
     <nav>
         <div class="nav-logo">
-            <img src="./favicon.png?v=4" alt="Achyuta Studio Icon">
+            <img src="./favicon.png?v=5" alt="Achyuta Studio Icon">
         </div>
         <div class="status-badge">Studio Launch 2026</div>
     </nav>
@@ -189,7 +195,7 @@
     <!-- Center Landing Area Content -->
     <main class="main-container">
         <div class="hero-logo-wrapper">
-            <img src="./favicon.png?v=4" alt="Achyuta Studio Central Logo">
+            <img src="./favicon.png?v=5" alt="Achyuta Studio Central Logo">
         </div>
         <h1>Something beautiful is <span>in the works</span>.</h1>
         <p>Achyuta Studio is currently crafting an elevated digital space. Our full brand showcase and interactive portfolio solutions platform will premiere shortly.</p>
